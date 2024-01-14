@@ -183,6 +183,10 @@ body {
       .service {
         padding: 35px 40px;
         gap: 20px;
+        img {
+          height: auto;
+          width: auto;
+        }
         h4 {
           @include text(24px, 700, $text-color);
         }
@@ -280,6 +284,7 @@ body {
     }
     img {
       width: 100%;
+      height: auto;
       margin-bottom: 15.8px !important;
     }
   }
@@ -491,13 +496,20 @@ body {
           @include text(24px, 700, $text-color);
           margin-bottom: 30px !important;
         }
-        p {
-          @include text(14px, 400, $second-text-color);
-          text-align: left;
-        }
         .img-container {
           @include rectangle-image(100%, 372px);
           border-radius: 5px;
+        }
+        .text {
+          gap: 30px;
+          p {
+            @include text(14px, 400, $second-text-color);
+            text-align: left;
+            &.block {
+              border-left: solid 3px #23856d;
+              padding-left: 24px;
+            }
+          }
         }
       }
     }
@@ -537,6 +549,10 @@ body {
       }
       .brands {
         padding: 50px 0;
+        img {
+          height: auto;
+          width: auto;
+        }
       }
     }
   }

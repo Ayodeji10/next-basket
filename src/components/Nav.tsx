@@ -3,6 +3,7 @@ import { TProduct } from "../../types";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { getCurrentPrice, getTotalPrice } from "@/utils/utils";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 type Props = {
   cartAdded?: boolean;
@@ -227,7 +228,13 @@ export default function Nav({ cartAdded, wishlistAdded, product }: Props) {
                           <div className="row mb-4" key={i}>
                             <div className="col-2">
                               <div className="img-container">
-                                <img src={item.thumbnail} alt={item.title} />
+                                <Image
+                                  src={item.thumbnail}
+                                  unoptimized
+                                  width={10}
+                                  height={10}
+                                  alt={item.title}
+                                />
                               </div>
                             </div>
                             <div className="col-6">
@@ -315,7 +322,13 @@ export default function Nav({ cartAdded, wishlistAdded, product }: Props) {
                           <div className="row mb-4 align-items-center" key={i}>
                             <div className="col-3">
                               <div className="img-container">
-                                <img src={item.thumbnail} alt={item.title} />
+                                <Image
+                                  src={item.thumbnail}
+                                  unoptimized
+                                  width={10}
+                                  height={10}
+                                  alt={item.title}
+                                />
                               </div>
                             </div>
                             <div className="col-8">

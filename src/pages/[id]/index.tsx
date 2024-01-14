@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import SkeletonLoader from "@/components/loaders/skeleton";
 import { getCurrentPrice } from "@/utils/utils";
 import ProductLoader from "@/components/loaders/productLoader";
+import Image from "next/image";
 
 export default function SingleProductPage() {
   // router
@@ -120,7 +121,13 @@ export default function SingleProductPage() {
                   {loading ? (
                     <SkeletonLoader height={"450px"} width={"100%"} />
                   ) : (
-                    <img src={product.images[imageIndex]} alt="" />
+                    <Image
+                      src={product.images[imageIndex]}
+                      unoptimized
+                      width={10}
+                      height={10}
+                      alt={product.title}
+                    />
                   )}
                   {imageIndex + 1 < product?.images?.length && (
                     <i
@@ -151,7 +158,13 @@ export default function SingleProductPage() {
                             key={i}
                             onClick={() => setImageIndex(i)}
                           >
-                            <img src={image} alt={product.title} key={i} />
+                            <Image
+                              src={image}
+                              unoptimized
+                              width={10}
+                              height={10}
+                              alt={product.title}
+                            />
                           </div>
                         );
                       })}
@@ -309,18 +322,36 @@ export default function SingleProductPage() {
                   ) : (
                     <h3>{product.description}</h3>
                   )}
-                  <p>
-                    Met minim Mollie non desert Alamo est sit cliquey dolor do
-                    met sent. RELIT official consequent door ENIM RELIT Mollie.
-                    Excitation venial consequent sent nostrum met.
-                  </p>
+                  <div className="text d-flex flex-column">
+                    <p>
+                      Met minim Mollie non desert Alamo est sit cliquey dolor do
+                      met sent. RELIT official consequent door ENIM RELIT
+                      Mollie. Excitation venial consequent sent nostrum met.
+                    </p>
+                    <p className="block">
+                      Met minim Mollie non desert Alamo est sit cliquey dolor do
+                      met sent. RELIT official consequent door ENIM RELIT
+                      Mollie. Excitation venial consequent sent nostrum met.
+                    </p>
+                    <p>
+                      Met minim Mollie non desert Alamo est sit cliquey dolor do
+                      met sent. RELIT official consequent door ENIM RELIT
+                      Mollie. Excitation venial consequent sent nostrum met.
+                    </p>
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-12 mt-3 mt-md-0 mt-lg-0">
                   <div className="img-container">
                     {loading ? (
                       <SkeletonLoader width={"100%"} height="372px" />
                     ) : (
-                      <img src={product.thumbnail} alt="" />
+                      <Image
+                        src={product.thumbnail}
+                        unoptimized
+                        width={10}
+                        height={10}
+                        alt={product.title}
+                      />
                     )}
                   </div>
                 </div>
@@ -365,8 +396,11 @@ export default function SingleProductPage() {
                             }}
                           >
                             <div className="img-container">
-                              <img
+                              <Image
                                 src={product.thumbnail}
+                                unoptimized
+                                width={10}
+                                height={10}
                                 alt={product.title}
                               />
                             </div>
@@ -395,22 +429,58 @@ export default function SingleProductPage() {
             <div className="brands">
               <div className="row align-items-center justify-content-center">
                 <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
-                  <img src="./assets/holi.png" alt="" />
+                  <Image
+                    src="/assets/holi.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center mt-5 mt-0 mt-lg-0">
-                  <img src="./assets/lya.png" alt="" />
+                  <Image
+                    src="/assets/lya.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center mt-5 mt-0 mt-lg-0">
-                  <img src="./assets/cap.png" alt="" />
+                  <Image
+                    src="/assets/cap.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center mt-5 mt-md-4 mt-lg-0">
-                  <img src="./assets/stripe.png" alt="" />
+                  <Image
+                    src="/assets/stripe.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center mt-5 mt-md-4 mt-lg-0">
-                  <img src="./assets//aws.png" alt="" />
+                  <Image
+                    src="/assets/aws.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center mt-5 mt-md-4 mt-lg-0">
-                  <img src="./assets/bot.png" alt="" />
+                  <Image
+                    src="/assets/bot.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
               </div>
             </div>

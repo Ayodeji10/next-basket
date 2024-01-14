@@ -8,6 +8,7 @@ import { ColorRing } from "react-loader-spinner";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import { getCurrentPrice } from "@/utils/utils";
+import Image from "next/image";
 
 export default function Home() {
   // router
@@ -94,7 +95,13 @@ export default function Home() {
                   onClick={() => router.push(`/${product.id}`)}
                 >
                   <div className="img-container">
-                    <img src={product.thumbnail} alt="" />
+                    <Image
+                      src={product.thumbnail}
+                      unoptimized
+                      width={10}
+                      height={10}
+                      alt={product.title}
+                    />
                   </div>
                   <div className="product-details d-flex flex-column align-items-center">
                     <h4>{product.title}</h4>
@@ -152,12 +159,24 @@ export default function Home() {
           </div>
           <div className="services-list d-flex flex-wrap justify-content-center">
             <div className="service d-flex flex-column align-items-center">
-              <img src="./assets/reader.png" alt="" />
+              <Image
+                src="/assets/reader.png"
+                unoptimized
+                width={10}
+                height={10}
+                alt="img"
+              />
               <h4>Easy Wins</h4>
               <p>Get your best looking smile now!</p>
             </div>
             <div className="service d-flex flex-column align-items-center">
-              <img src="./assets/book.png" alt="" />
+              <Image
+                src="/assets/book.png"
+                unoptimized
+                width={10}
+                height={10}
+                alt="img"
+              />
               <h4>Concrete</h4>
               <p>
                 Defalcate is most focused in helping you discover your most
@@ -165,7 +184,13 @@ export default function Home() {
               </p>
             </div>
             <div className="service d-flex flex-column align-items-center">
-              <img src="./assets/growth.png" alt="" />
+              <Image
+                src="/assets/growth.png"
+                unoptimized
+                width={10}
+                height={10}
+                alt="img"
+              />
               <h4>Hack Growth</h4>
               <p>Overcame any hurdle or any other problem.</p>
             </div>
@@ -181,7 +206,13 @@ export default function Home() {
             <div className="col-12 col-md-6 col-lg-4 mb-4 mb-md-4 mb-lg-0">
               <div className="post-card">
                 <div className="post-img">
-                  <img src="./assets/post1.png" alt="" />
+                  <Image
+                    src="/assets/post1.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <span>NEW</span>
                 <div className="post-details d-flex flex-column">
@@ -251,7 +282,13 @@ export default function Home() {
             <div className="col-12 col-md-6 col-lg-4 mb-4 mb-md-4 mb-lg-0">
               <div className="post-card">
                 <div className="post-img">
-                  <img src="./assets/post2.png" alt="" />
+                  <Image
+                    src="/assets/post2.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <span>NEW</span>
                 <div className="post-details d-flex flex-column">
@@ -321,7 +358,13 @@ export default function Home() {
             <div className="col-12 col-md-6 col-lg-4">
               <div className="post-card">
                 <div className="post-img">
-                  <img src="./assets/post3.png" alt="" />
+                  <Image
+                    src="/assets/post3.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
+                  />
                 </div>
                 <span>NEW</span>
                 <div className="post-details d-flex flex-column">
@@ -396,7 +439,13 @@ export default function Home() {
             <div className="col-lg-7 col-md-5 col-12">
               <h3>What they say about us</h3>
               <div className="person d-flex flex-column align-items-center">
-                <img src="./assets/user.png" alt="" />
+                <Image
+                  src="/assets/user.png"
+                  unoptimized
+                  width={10}
+                  height={10}
+                  alt="img"
+                />
                 <div className="stars d-flex gap-2 align-items-center">
                   <i className="fa-solid fa-star" />
                   <i className="fa-solid fa-star" />
@@ -415,66 +464,84 @@ export default function Home() {
             <div className="col-lg-5 col-md-7 col-12">
               <div className="row">
                 <div className="col-4">
-                  <img
-                    src="./assets/review1.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review1.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review2.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review2.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review3.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review3.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review4.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review4.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review5.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review5.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review6.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review6.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review7.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review7.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review8.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review8.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
                 <div className="col-4">
-                  <img
-                    src="./assets/review9.png"
-                    alt=""
-                    className="img-fluid"
+                  <Image
+                    src="/assets/review9.png"
+                    unoptimized
+                    width={10}
+                    height={10}
+                    alt="img"
                   />
                 </div>
               </div>
