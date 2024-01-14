@@ -9,6 +9,7 @@ import SkeletonLoader from "@/components/loaders/skeleton";
 import { getCurrentPrice } from "@/utils/utils";
 import ProductLoader from "@/components/loaders/productLoader";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SingleProductPage() {
   // router
@@ -99,7 +100,7 @@ export default function SingleProductPage() {
         <div className="product">
           <div className="container">
             <div className="top d-flex align-items-center justify-content-center d-flex justify-content-md-start justify-content-lg-start">
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
               <i className="fa-solid fa-chevron-right" />
               <a href="" className="active">
                 Shop

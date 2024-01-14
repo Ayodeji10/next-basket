@@ -221,10 +221,10 @@ export default function Home() {
                     <small>Trending</small>
                     <small>New</small>
                   </div>
-                  <h3>Loudest à la Madison #1 (L'integral)</h3>
+                  <h3>Loudest à la Madison #1 (L&apos;integral)</h3>
                   <p>
-                    We focus on ergonomics and meeting you where you work. It's
-                    only a keystroke away.
+                    We focus on ergonomics and meeting you where you work.
+                    It&apos;s only a keystroke away.
                   </p>
                   <div className="d-flex justify-content-between align-items-center py-2">
                     <h5>
@@ -297,10 +297,10 @@ export default function Home() {
                     <small>Trending</small>
                     <small>New</small>
                   </div>
-                  <h3>Loudest à la Madison #1 (L'integral)</h3>
+                  <h3>Loudest à la Madison #1 (L&apos;integral)</h3>
                   <p>
-                    We focus on ergonomics and meeting you where you work. It's
-                    only a keystroke away.
+                    We focus on ergonomics and meeting you where you work.
+                    It&apos;s only a keystroke away.
                   </p>
                   <div className="d-flex justify-content-between align-items-center py-2">
                     <h5>
@@ -373,10 +373,10 @@ export default function Home() {
                     <small>Trending</small>
                     <small>New</small>
                   </div>
-                  <h3>Loudest à la Madison #1 (L'integral)</h3>
+                  <h3>Loudest à la Madison #1 (L&apos;integral)</h3>
                   <p>
-                    We focus on ergonomics and meeting you where you work. It's
-                    only a keystroke away.
+                    We focus on ergonomics and meeting you where you work.
+                    It&apos;s only a keystroke away.
                   </p>
                   <div className="d-flex justify-content-between align-items-center py-2">
                     <h5>
