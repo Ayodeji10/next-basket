@@ -55,8 +55,10 @@ body {
       i {
         color: $primary-color;
       }
-      a {
+      a,
+      button {
         @include text(14px, 700, $primary-color);
+        background-color: transparent;
         cursor: pointer;
         i {
           margin-right: 5px;

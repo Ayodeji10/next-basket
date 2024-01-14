@@ -206,10 +206,10 @@ export default function Nav({ cartAdded, wishlistAdded, product }: Props) {
                 Login / Register
               </a>
               <i className="fa-solid fa-magnifying-glass" />
-              <a onClick={() => setShowCart(true)}>
+              <button onClick={() => setShowCart(true)}>
                 <i className="fa-solid fa-cart-shopping" />
                 <small>{cart.length}</small>
-              </a>
+              </button>
               <Offcanvas
                 show={showCart}
                 onHide={() => setShowCart(false)}
@@ -300,10 +300,10 @@ export default function Nav({ cartAdded, wishlistAdded, product }: Props) {
                   )}
                 </Offcanvas.Body>
               </Offcanvas>
-              <a onClick={() => setShowWishList(true)}>
+              <button onClick={() => setShowWishList(true)}>
                 <i className="fa-regular fa-heart" />{" "}
                 <small>{whishlist.length}</small>
-              </a>
+              </button>
               <Offcanvas
                 show={showWishlist}
                 onHide={() => setShowWishList(false)}
