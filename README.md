@@ -16,6 +16,6 @@ This porject is hosted [Here](https://next-basket-two.vercel.app/).
 ### `Running this project locally`
 
 To run this project on your local machine, clone this repository, delete the package-lock.json file and run "npm install"
-then run "npm run build"
+then run "npm run dev"
 
 Thank you for your time.
