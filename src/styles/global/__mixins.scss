@@ -1,0 +1,187 @@
+@mixin text($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin round-image($size) {
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+  img {
+    height: auto;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: top;
+    width: 100% !important;
+  }
+
+  @if $size == 42px {
+    border: 1px solid $border-color;
+  }
+  @if $size == 48px {
+    border: 2px solid #e0e2f0;
+  }
+}
+
+@mixin rectangle-image($width, $height) {
+  // background-size: 130%;
+  object-fit: cover;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  img {
+    height: auto;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: top;
+    width: 100% !important;
+  }
+}
+
+@mixin squre-image($size) {
+  border-radius: 2px;
+  border: solid 1px rgba(225, 230, 239, 1);
+  padding: 10px;
+  position: relative;
+  background-position: 70% 50%;
+  background-repeat: no-repeat;
+  background-size: 130%;
+  object-fit: cover;
+  width: $size;
+  height: $size;
+  margin-top: 10px;
+  img {
+    height: auto;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: top;
+    width: 100% !important;
+  }
+}
+
+@mixin input($border: none) {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid $border;
+  color: $black;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #a0a3bd;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(51, 51, 51, 0.5);
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(51, 51, 51, 0.5);
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(51, 51, 51, 0.5);
+  }
+}
+
+@mixin select($background, $border: none) {
+  background: $background;
+  border: 1px solid $border;
+  color: #6e7191;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #a0a3bd;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a0a3bd;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a0a3bd;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a0a3bd;
+  }
+}
+
+@mixin textarea($background, $border) {
+  background: $background;
+  border: 1px solid $border;
+  padding: 15px;
+  color: #6e7191;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+@mixin buttons($color) {
+  padding: 14px 31.5px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: $primary-font;
+
+  @if $color == black {
+    background: $button-bg;
+    color: $white;
+    transition: $transitions !important;
+    &:hover {
+      color: $white;
+      background: $primary-color;
+    }
+
+    .bi {
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}
+
+@mixin next-btn {
+  margin-top: 30px;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}

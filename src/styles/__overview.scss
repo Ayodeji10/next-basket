@@ -1,0 +1,668 @@
+body {
+  // background-color: #f5f4f4;
+  .info {
+    padding: 20px 38px;
+    background-color: $secondary-color;
+    p {
+      @include text(14px, 400, $white);
+      text-align: center;
+      i {
+        margin-right: 5px;
+      }
+    }
+    i {
+      color: $white;
+    }
+  }
+  // nav
+  nav {
+    padding: 25px 38px !important;
+    .navbar-brand {
+      margin-right: 119px;
+      h3 {
+        @include text(24px, 700, $text-color);
+      }
+    }
+    ul li {
+      a {
+        @include text(14px, 700, $text-color);
+        text-decoration: none;
+        margin-right: 21px;
+        // &.active {
+        //   border-bottom: 3px solid rgba(0, 0, 0, 1);
+        // }
+      }
+      ul {
+        border: 1px solid rgb(241, 243, 249) !important;
+        border-radius: 0 !important;
+        background-color: $white;
+        padding: 0 !important;
+        top: 80% !important;
+        li {
+          padding: 8px 16px;
+          &:hover {
+            background-color: rgba(255, 249, 230, 1);
+          }
+          a {
+            padding: 0 !important;
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
+    .right-menu {
+      gap: 30px;
+      i {
+        color: $primary-color;
+      }
+      a {
+        @include text(14px, 700, $primary-color);
+        cursor: pointer;
+        i {
+          margin-right: 5px;
+        }
+        small {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  // hero
+  .hero {
+    padding: 80px 0;
+    .category {
+      padding: 24px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      &.cat1 {
+        background-image: url("/assets/cat1.png");
+        min-height: 100%;
+      }
+      &.cat2 {
+        background-image: url("/assets/cat2.png");
+        min-height: 300px;
+      }
+      &.cat3 {
+        background-image: url("/assets/cat3.png");
+        min-height: 300px;
+      }
+      &.cat4 {
+        background-image: url("/assets/cat4.png");
+        min-height: 300px;
+      }
+      small {
+        @include text(14px, 700, $success-color);
+      }
+      h3 {
+        @include text(40px, 700, $text-color);
+      }
+      h4 {
+        @include text(24px, 700, $text-color);
+      }
+      a {
+        @include text(14px, 700, $text-color);
+      }
+    }
+  }
+  // products
+  .products {
+    padding: 80px 0;
+    gap: 24px;
+    .header {
+      gap: 10px;
+      text-align: center;
+      p {
+        @include text(20px, 400, $second-text-color);
+      }
+      h3 {
+        @include text(24px, 700, $text-color);
+      }
+      small {
+        @include text(14px, 400, $second-text-color);
+      }
+    }
+    .product-list {
+      padding: 24px;
+      gap: 30px;
+      flex-wrap: wrap;
+      .product {
+        // width: 18%;
+        margin-bottom: 15px !important;
+        cursor: pointer;
+        .img-container {
+          @include rectangle-image(183px, 238px);
+        }
+        .product-details {
+          padding: 25px;
+          gap: 10px;
+          * {
+            max-width: 170px;
+            text-align: center;
+          }
+          h4 {
+            @include text(16px, 700, $text-color);
+          }
+          h5 {
+            @include text(14px, 700, $second-text-color);
+          }
+          p {
+            @include text(16px, 700, $muted-color);
+            span {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+    button {
+      @include text(14px, 700, $primary-color);
+      width: 261px;
+      padding: 15px 0;
+      border: solid 1px $primary-color;
+      border-radius: 5px;
+      background-color: transparent;
+    }
+  }
+  // features
+  .features {
+    padding: 80px 0;
+    gap: 80px;
+    margin-bottom: 16p !important;
+    h5 {
+      @include text(20px, 400, $second-text-color);
+    }
+    h4 {
+      @include text(24px, 700, $text-color);
+    }
+    p {
+      @include text(14px, 400, $second-text-color);
+    }
+    .services-list {
+      gap: 43px;
+      .service {
+        padding: 35px 40px;
+        gap: 20px;
+        h4 {
+          @include text(24px, 700, $text-color);
+        }
+        p {
+          @include text(14px, 400, $second-text-color);
+          max-width: 232px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .posts {
+    padding: 112px 0;
+    gap: 80px;
+    p {
+      @include text(14px, 700, $primary-text-color);
+    }
+    h3 {
+      @include text(40px, 700, $text-color);
+    }
+    .post-card {
+      position: relative;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+      .post-img {
+        @include rectangle-image(100%, 300px);
+      }
+      span {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: inline;
+        @include text(14px, 700, $white);
+        line-height: 24px;
+        padding: 0 10px;
+        background-color: $danger-color;
+        border-radius: 3px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+      }
+      .post-details {
+        padding: 25px 25px 35px;
+        gap: 10px;
+        small {
+          @include text(12px, 400, $second-text-color);
+          &.active {
+            color: $disabled-element-color;
+          }
+        }
+        h3 {
+          @include text(20px, 400, $text-color);
+        }
+        p {
+          @include text(14px, 400, $second-text-color);
+        }
+        h5 {
+          @include text(12px, 400, $second-text-color);
+        }
+        a {
+          @include text(14px, 700, $second-text-color);
+          i {
+            margin-left: 10px;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    padding: 128px 0;
+    text-align: center;
+    h3 {
+      @include text(24px, 700, $text-color);
+      margin-bottom: 28px !important;
+    }
+    .person {
+      padding: 35px;
+      gap: 20px;
+      img {
+        width: 90px;
+        height: 90px;
+      }
+      i {
+        font-size: 20px;
+        color: rgba(243, 205, 3, 1);
+      }
+      p {
+        @include text(14px, 700, $second-text-color);
+        max-width: 430px;
+      }
+      h5 {
+        @include text(14px, 700, $primary-color);
+      }
+      h6 {
+        @include text(14px, 700, $text-color);
+      }
+    }
+    img {
+      width: 100%;
+      margin-bottom: 15.8px !important;
+    }
+  }
+  .call-to-action {
+    padding: 160px 0 112px;
+    background-image: url("/assets/call-to-action.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    gap: 30px;
+    h6 {
+      @include text(14px, 700, $primary-text-color);
+    }
+    h3 {
+      @include text(40px, 700, $text-color);
+      max-width: 571px;
+    }
+    p {
+      @include text(14px, 400, $second-text-color);
+      max-width: 447px;
+    }
+    h4 {
+      @include text(24px, 700, $secondary-color);
+    }
+    button {
+      @include text(14px, 700, $white);
+      padding: 15px 40px;
+      background-color: $primary-color;
+      border-radius: 5px;
+    }
+  }
+  footer {
+    .top {
+      padding: 40px 0;
+      border-bottom: solid 1px #e6e6e6;
+      h3 {
+        @include text(24px, 700, $text-color);
+        padding: 13px 0;
+      }
+      i {
+        color: $primary-color;
+        font-size: 20px;
+      }
+    }
+    .main {
+      padding: 50px 0;
+      h4 {
+        @include text(16px, 700, $text-color);
+      }
+      p {
+        @include text(14px, 700, $second-text-color);
+      }
+      .searchbar {
+        border: solid 1px #e6e6e6;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        input {
+          @include text(14px, 400, $second-text-color);
+          padding: 15px 20px;
+          background-color: transparent;
+          border: none !important;
+          width: 60%;
+        }
+        button {
+          padding: 15px 22.5px;
+          background-color: $primary-color;
+          color: $white;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+      h6 {
+        @include text(12px, 400, $second-text-color);
+        line-height: 28px;
+      }
+    }
+    .bottom {
+      background-color: #fafafa;
+      p {
+        @include text(14px, 700, $second-text-color);
+        padding: 25px 0;
+      }
+    }
+  }
+
+  // single product
+  .single-product {
+    .product {
+      background-color: #fafafa;
+      .top {
+        padding: 34px 0;
+        gap: 15px;
+        a {
+          @include text(14px, 700, $text-color);
+          &.active {
+            color: $muted-color;
+          }
+        }
+        i {
+          color: $muted-color;
+          font-size: 15px;
+        }
+      }
+      .big-image {
+        @include rectangle-image(100%, 450px);
+        position: relative;
+        margin-bottom: 21px !important;
+        i {
+          position: absolute;
+          top: 250px;
+          color: $white;
+          font-size: 30px;
+          cursor: pointer;
+          &.fa-chevron-left {
+            left: 35px;
+          }
+          &.fa-chevron-right {
+            right: 35px;
+          }
+        }
+      }
+      .scroller {
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .img-container {
+          @include rectangle-image(100px, 75px);
+        }
+      }
+      .details {
+        padding: 11px 24px;
+        h1 {
+          @include text(20px, 400, $text-color);
+          margin-bottom: 12px !important;
+        }
+        i {
+          color: $secondary-color-2;
+          font-size: 20px;
+        }
+        small {
+          @include text(14px, 700, $second-text-color);
+        }
+        h2 {
+          @include text(24px, 700, $text-color);
+          margin-bottom: 5px !important;
+        }
+        h3 {
+          @include text(14px, 700, $second-text-color);
+          padding-bottom: 119px;
+          border-bottom: solid 1px #bdbdbd;
+          margin-bottom: 29px !important;
+          span {
+            color: $primary-color;
+          }
+        }
+        .colors {
+          gap: 10px;
+          margin-bottom: 67px !important;
+          .circle {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            &.c1 {
+              background-color: $primary-color;
+            }
+            &.c2 {
+              background-color: $success-color;
+            }
+            &.c3 {
+              background-color: $alert-color;
+            }
+            &.c4 {
+              background-color: $black;
+            }
+          }
+        }
+        span#option {
+          @include text(14px, 700, $white);
+          padding: 10px 20px;
+          background-color: $primary-color;
+          border-radius: 5px;
+        }
+        button {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: solid 1px #e8e8e8;
+          background-color: transparent;
+        }
+      }
+    }
+    .description {
+      .top {
+        padding: 34px 0;
+        gap: 48px;
+        border-bottom: solid 1px #ececec;
+        p {
+          @include text(14px, 700, $second-text-color);
+        }
+      }
+      .info {
+        background-color: transparent;
+        padding: 41px 0;
+        h3 {
+          @include text(24px, 700, $text-color);
+          margin-bottom: 30px !important;
+        }
+        p {
+          @include text(14px, 400, $second-text-color);
+          text-align: left;
+        }
+        .img-container {
+          @include rectangle-image(100%, 372px);
+          border-radius: 5px;
+        }
+      }
+    }
+    .best-sellers {
+      background-color: #fafafa;
+      .products {
+        padding: 48px 0;
+        h3 {
+          @include text(24px, 700, $text-color);
+          padding-bottom: 24px;
+          border-bottom: solid 1px #ececec;
+          margin-bottom: 24px !important;
+        }
+      }
+      .product-card {
+        background-color: $white;
+        margin-bottom: 24px !important;
+        .img-container {
+          @include rectangle-image(100%, 280px);
+        }
+        .details {
+          padding: 25px;
+          gap: 10px;
+          h4 {
+            @include text(16px, 700, $text-color);
+          }
+          h5 {
+            @include text(14px, 700, $second-text-color);
+          }
+          p {
+            @include text(16px, 700, $muted-color);
+            span {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      .brands {
+        padding: 50px 0;
+      }
+    }
+  }
+}
+
+// cart
+.cart {
+  &.offcanvas {
+    width: 500px !important;
+  }
+  h2 {
+    @include text(20px, 700, $black);
+    text-align: center;
+  }
+  .img-container {
+    @include rectangle-image(100%, auto);
+    border-radius: 5px;
+  }
+  h3 {
+    @include text(16px, 600, $text-color);
+  }
+  h4 {
+    @include text(14px, 400, $second-text-color);
+  }
+  button {
+    &.btn {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: solid 1px $black;
+    }
+  }
+  i {
+    color: $danger-color;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  p {
+    @include text(20px, 700, $black);
+    text-align: right;
+  }
+}
+
+/* media queries */
+@media (min-width: 1120px) and (max-width: 1399px) {
+}
+
+@media (min-width: 992px) and (max-width: 1119px) {
+  // nav
+  nav {
+    padding: 25px 38px !important;
+    .navbar-brand {
+      margin-right: 50px !important;
+    }
+    ul li {
+      a {
+        margin-right: 15px !important;
+      }
+    }
+    .right-menu {
+      gap: 20px !important;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  // hero
+  .hero {
+    .category {
+      &.cat1 {
+        min-height: 300px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  // hero
+  .hero {
+    .category {
+      &.cat1 {
+        min-height: 300px !important;
+      }
+    }
+  }
+  // single product
+  .product {
+    background-color: #fafafa;
+    .details {
+      padding: 11px 0 !important;
+      h3 {
+        padding-bottom: 32px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  // nav
+  .info {
+    padding: 20px 15px !important;
+  }
+  nav {
+    padding: 25px 15px !important;
+  }
+  // hero
+  .hero {
+    padding: 50px 0 !important;
+    .category {
+      &.cat1 {
+        min-height: 300px !important;
+      }
+    }
+  }
+  // products
+  .products {
+    padding: 50px 0 !important;
+  }
+  // features
+  .features {
+    padding: 50px 0;
+    .services-list {
+      gap: 30px !important;
+    }
+  }
+}
