@@ -4,6 +4,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { getCurrentPrice, getTotalPrice } from "@/utils/utils";
 import { toast } from "react-toastify";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   cartAdded?: boolean;
@@ -143,9 +144,9 @@ export default function Nav({ cartAdded, wishlistAdded, product }: Props) {
       {/* navbar  */}
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link href={"/"} className="navbar-brand">
             <h3>Bandage</h3>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -163,9 +164,9 @@ export default function Nav({ cartAdded, wishlistAdded, product }: Props) {
           >
             <ul className="navbar-nav align-items-lg-start align-items-center">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link href={"/"} className="nav-link active">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a

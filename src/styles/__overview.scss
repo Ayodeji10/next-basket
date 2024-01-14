@@ -59,6 +59,7 @@ body {
       button {
         @include text(14px, 700, $primary-color);
         background-color: transparent;
+        padding: 0;
         cursor: pointer;
         i {
           margin-right: 5px;
